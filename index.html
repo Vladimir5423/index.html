@@ -221,6 +221,25 @@
             animation: slideIn 0.5s ease-out;
         }
 
+        /* 📱 Только для мобильных - переносим плашку ниже */
+        @media (max-width: 768px) {
+            .completion-overlay {
+                top: 70%; /* Переносим ниже на телефоне */
+                transform: translate(-50%, -50%);
+                max-width: 85%;
+                padding: 30px 20px;
+            }
+        }
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .completion-overlay {
+        top: 75%; /* Еще ниже на маленьких экранах */
+        max-width: 90%;
+        padding: 25px 15px;
+    }
+}
+
         .completion-overlay.active {
             display: block;
         }
