@@ -221,13 +221,18 @@
             animation: slideIn 0.5s ease-out;
         }
 
-        /* 📱 Только для мобильных - переносим плашку ниже */
+        /* 📱 Стили для мобильной версии плашки */
         @media (max-width: 768px) {
-            .completion-overlay {
-                top: 90%; /* Переносим ниже на телефоне */
-                transform: translate(-50%, -50%);
-                max-width: 85%;
-                padding: 30px 20px;
+            .completion-overlay.mobile-version {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                top: auto;
+                width: 90%;
+                max-width: 400px;
+                margin: 0;
+                z-index: 1001;
             }
         }
 
